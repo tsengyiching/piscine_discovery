@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piscine Web</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      div {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 5%;
+        padding-right: 5%;
+        flex-flow: row wrap;
+      }
+      @media all and (min-width: 600px) {
+        img {
+          width: 50%;
+        }
+      }
+      @media all and (max-width: 600px) {
+        .div {
+          flex-flow: column wrap;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Piscine Web</h1>
+    </header>
+    <main>
+      <div>
+        <img
+          src="https://www.guinnessworldrecords.com/Images/Maru_tcm25-466616.jpg"
+          alt="Maru the cat in a clear box"
+        />
+        <img
+          src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2012/10/12/11/(1)%20Press%20Image%20l%20For%20the%20LOL%20of%20Cats%20l%20Maru.jpg?width=1200"
+          alt="Maru the cat in a bag"
+        />
+      </div>
+    </main>
+  </body>
+</html>

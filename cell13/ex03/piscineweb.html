@@ -17,7 +17,14 @@
         flex-flow: row wrap;
       }
       @media all and (min-width: 600px) {
-        img {
+        a {
+          display: flex;
+          width: 45%;
+        }
+        .first {
+          width: 100%;
+        }
+        .second {
           width: 45%;
         }
       }
@@ -37,11 +44,14 @@
     </header>
     <main>
       <div>
+        <a href="https://www.youtube.com/watch?v=INscMGmhmX4"
+          ><img
+            class="first"
+            src="https://www.guinnessworldrecords.com/Images/Maru_tcm25-466616.jpg"
+            alt="Maru the cat in a clear box"
+        /></a>
         <img
-          src="https://www.guinnessworldrecords.com/Images/Maru_tcm25-466616.jpg"
-          alt="Maru the cat in a clear box"
-        />
-        <img
+          class="second"
           src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2012/10/12/11/(1)%20Press%20Image%20l%20For%20the%20LOL%20of%20Cats%20l%20Maru.jpg?width=1200"
           alt="Maru the cat in a bag"
         />

@@ -1,0 +1,42 @@
+body,
+html {
+  height: 100%;
+}
+.bgimg-1 {
+  /* The image used */
+  background-image: url("https://www.guinnessworldrecords.com/Images/Maru_tcm25-466616.jpg");
+
+  /* Set a specific height */
+  /* height: 500px; */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.caption {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+p {
+  color: black;
+}
+.center {
+  background-color: black;
+  text-align: center;
+  padding: 100px 100px;
+}
+.bgimg-2 {
+  background-image: url("https://static.boredpanda.com/blog/wp-content/uploads/2017/04/maru-cat-box-hairstyles-fb.png");
+  height: 100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

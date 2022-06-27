@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+      .bgimg-1 {
+        /* The image used */
+        background-image: url("./images/maru-2.jpeg");
+
+        /* Set a specific height */
+        /* height: 500px; */
+        height: 100%;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .caption {
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+      }
+      p {
+        color: black;
+      }
+      .center {
+        background-color: black;
+        text-align: center;
+        padding: 100px 100px;
+      }
+      .bgimg-2 {
+        background-image: url("images/maru-1.png");
+        height: 100%;
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgimg-1">
+      <div class="caption">
+        <p>Maru</p>
+      </div>
+    </div>
+    <div class="center">
+      <h3 style="color: white">Hi from Maru the cat.</h3>
+    </div>
+    <div class="bgimg-2">
+      <div class="caption">
+        <p>ByeBye</p>
+      </div>
+    </div>
+  </body>
+</html>

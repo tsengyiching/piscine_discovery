@@ -1,0 +1,60 @@
+body {
+  height: 100vh;
+}
+
+nav {
+  font-family: Verdana, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  width: 25%;
+}
+
+nav ul li > ul {
+  display: none;
+  flex-direction: column;
+}
+
+nav ul li > ul li {
+  width: 100%;
+}
+
+nav ul li:hover > ul {
+  display: flex;
+}
+
+nav a {
+  text-transform: uppercase;
+  display: block;
+  background: #3a3939;
+  padding: 15px;
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background: #262626;
+}
+
+.drop-down li > a {
+  background: #262626;
+}
+
+.drop-down li > a:hover {
+  background: black;
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    width: 100%;
+  }
+}

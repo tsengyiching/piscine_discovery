@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+  </head>
+  <body>
+    <div>
+      <button type="button" onclick="changeColor()">Click me!</button>
+    </div>
+  </body>
+  <script>
+    function changeColor() {
+      const colors = ["blue", "green", "black", "pink", "yellow"];
+      let index = Math.floor(Math.random() * colors.length);
+      let newColor = colors[index];
+      if (document.body.style.backgroundColor != newColor) {
+        document.body.style.backgroundColor = newColor;
+      } else {
+        let newColors = colors.filter((color) => color != newColor);
+        newColors[Math.floor(Math.random() * newColors.length)];
+      }
+    }
+  </script>
+</html>

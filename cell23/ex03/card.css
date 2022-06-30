@@ -9,7 +9,7 @@ body {
 }
 
 table {
-  width: 30%;
+  width: 25%;
   height: 75%;
   top: 10%;
   position: absolute;
@@ -40,7 +40,7 @@ img {
 
 .login {
   height: 10%;
-  font-size: larger;
+  font-size: xx-large;
   font-weight: bolder;
 }
 
@@ -48,23 +48,42 @@ img {
   color: gray;
 }
 
+.logos {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.logo-container {
+  display: flex;
+  width: 8%;
+  height: 8%;
+}
+
+a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+
 .contact {
   height: 7%;
   background-color: black;
-  color: rgb(217, 216, 216);
+  padding: 0;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  text-decoration: none;
   font-size: large;
-}
-
-.td-left {
-  width: 40%;
-  text-align: end;
-}
-
-.td-middle {
-  width: 10%;
-}
-
-.td-right {
-  width: 40%;
-  text-align: start;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

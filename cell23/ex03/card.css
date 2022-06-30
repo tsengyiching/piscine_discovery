@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, sans-serif;
+}
+
+table {
+  width: 30%;
+  height: 75%;
+  top: 10%;
+  position: absolute;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+td {
+  text-align: center;
+}
+
+.profile {
+  height: 10%;
+  font-family: Georgia, serif;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.photo {
+  height: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: 60%;
+  width: 100%;
+}
+
+.login {
+  height: 10%;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.level {
+  color: gray;
+}
+
+.contact {
+  height: 7%;
+  background-color: black;
+  color: rgb(217, 216, 216);
+  font-size: large;
+}
+
+.td-left {
+  width: 40%;
+  text-align: end;
+}
+
+.td-middle {
+  width: 10%;
+}
+
+.td-right {
+  width: 40%;
+  text-align: start;
+}

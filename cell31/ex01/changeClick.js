@@ -18,20 +18,20 @@ function changeColor(elem) {
 
 function changeBalloonSize(elem) {
   let currentHeight = elem.style.height;
-  let currentPx;
+  let px;
 
   if (currentHeight == "") currentHeight = "200px";
-  currentPx = currentHeight.slice(0, currentHeight.length - 2);
-  currentPx = Number(currentPx);
+  px = currentHeight.slice(0, currentHeight.length - 2);
+  px = Number(px);
 
-  if (currentPx < 420) {
-    currentPx += 10;
+  if (px < 420) {
+    px += 10;
   } else {
-    currentPx = 200;
+    px = 200;
   }
 
-  elem.style.height = `${currentPx}px`;
-  elem.style.width = `${currentPx}px`;
+  elem.style.height = `${px}px`;
+  elem.style.width = `${px}px`;
 }
 
 function handleClick() {

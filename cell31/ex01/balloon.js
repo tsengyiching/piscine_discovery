@@ -1,4 +1,4 @@
-function changeColor(elem) {
+function changeColor(elem, action) {
   let index;
   const colors = ["red", "green", "blue"];
   let currentColor = elem.style.backgroundColor;
@@ -8,15 +8,24 @@ function changeColor(elem) {
   }
 
   index = colors.indexOf(currentColor);
-  if (index < 2) {
-    index++;
-  } else {
-    index = 0;
+
+  if (action == "click") {
+    if (index < 2) {
+      index++;
+    } else {
+      index = 0;
+    }
+  } else if (action == "leave") {
+    if (index > 0) {
+      index--;
+    } else {
+      index = 2;
+    }
   }
   elem.style.backgroundColor = colors[index];
 }
 
-function changeBalloonSize(elem) {
+function changeBalloonSize(elem, action) {
   let currentHeight = elem.style.height;
   let px;
 
@@ -24,8 +33,10 @@ function changeBalloonSize(elem) {
   px = currentHeight.slice(0, currentHeight.length - 2);
   px = Number(px);
 
-  if (px < 420) {
+  if (action == "click" && px < 420) {
     px += 10;
+  } else if (action == "leave" && px > 200) {
+    px -= 5;
   } else {
     px = 200;
   }
@@ -37,6 +48,13 @@ function changeBalloonSize(elem) {
 function handleClick() {
   const elem = document.getElementById("balloon");
 
-  changeColor(elem);
-  changeBalloonSize(elem);
+  changeColor(elem, "click");
+  changeBalloonSize(elem, "click");
+}
+
+function handleLeave() {
+  const elem = document.getElementById("balloon");
+
+  changeColor(elem, "leave");
+  changeBalloonSize(elem, "leave");
 }

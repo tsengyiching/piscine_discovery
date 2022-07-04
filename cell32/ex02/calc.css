@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+}
+
+h3 {
+  text-align: center;
+}
+
+.calc {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+}

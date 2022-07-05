@@ -53,11 +53,11 @@ function calc(fNum, sNum, operator) {
       break;
   }
 
-  if (result <= Number.MAX_VALUE && result >= Number.MIN_VALUE) {
+  if (result > Number.MAX_VALUE || result < Number.MIN_VALUE) {
+    alert("Overflow!");
+  } else {
     alert(`Result: ${result}`);
     console.log("Result: ", result);
-  } else {
-    alert("Overflow!");
   }
 }
 
@@ -66,11 +66,11 @@ function handleClick() {
   let sNum = document.getElementById("sNum").value;
   const operator = document.getElementById("operators").value;
 
-  if (onlyNumbers(fNum) && onlyNumbers(sNum)) {
+  if (!onlyNumbers(fNum) || !onlyNumbers(sNum)) {
+    alert("Error :(");
+  } else {
     if (check(fNum, sNum, operator)) {
       calc(fNum, sNum, operator);
     }
-  } else {
-    alert("Error :(");
   }
 }

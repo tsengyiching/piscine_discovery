@@ -3,19 +3,17 @@ function changeColor(elem, action) {
   const colors = ["red", "green", "blue"];
   let currentColor = elem.style.backgroundColor;
 
-  if (currentColor == "") {
-    currentColor = "red";
-  }
+  if (!currentColor) currentColor = "red";
 
   index = colors.indexOf(currentColor);
 
-  if (action == "click") {
+  if (action === "click") {
     if (index < 2) {
       index++;
     } else {
       index = 0;
     }
-  } else if (action == "leave") {
+  } else if (action === "leave") {
     if (index > 0) {
       index--;
     } else {
@@ -29,7 +27,7 @@ function changeBalloonSize(elem, action) {
   let currentHeight = elem.style.height;
   let px;
 
-  if (currentHeight == "") currentHeight = "200px";
+  if (!currentHeight) currentHeight = "200px";
   px = currentHeight.slice(0, currentHeight.length - 2);
   px = Number(px);
 

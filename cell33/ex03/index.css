@@ -8,6 +8,7 @@ body {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   min-height: 500px;
+  min-width: 500px;
 }
 
 header {
@@ -63,9 +64,12 @@ i {
 .todo {
   background-color: rgba(47, 45, 45, 0.05);
   margin-top: 4%;
-  height: 20%;
+  height: 10%;
   width: 90%;
   border-radius: 8px;
+  border: 0px;
+  display: flex;
+  align-items: center;
 }
 
 .todo > p {

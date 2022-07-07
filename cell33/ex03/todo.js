@@ -4,7 +4,6 @@ function handleClick() {
   let text = prompt("Whant needs to be done ?");
 
   if (!todos.length) {
-    todos = [];
     lastId = 0;
   } else {
     lastId = Number(document.getElementsByClassName("todo")[0].id) + 1;

@@ -3,7 +3,7 @@ function handleClick() {
   let lastId;
   let text = prompt("Whant needs to be done ?");
 
-  if (!todos) {
+  if (!todos.length) {
     todos = [];
     lastId = 0;
   } else {
@@ -17,12 +17,27 @@ function handleClick() {
   renderTodo(newTodo);
 }
 
+function handleRemove(id, text) {
+  let todos = getTodos();
+  let div = document.getElementById(id);
+  const index = todos.findIndex((todo) => todo.key === id);
+
+  if (!confirm(`Are you sure to remove todo :  ${text}?`)) {
+    return;
+  } else {
+    div.remove();
+    todos.splice(index, 1);
+    document.cookie = `todos` + `=` + JSON.stringify(todos);
+  }
+}
+
 function renderTodo(elem) {
   const list = document.getElementById("ft_list");
 
   let div = document.createElement("div");
   div.classList.add("todo");
   div.setAttribute("id", elem.key);
+  div.onclick = () => handleRemove(elem.key, elem.text);
 
   let para = document.createElement("p");
   let node = document.createTextNode(elem.text);

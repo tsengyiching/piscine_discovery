@@ -74,3 +74,7 @@ function handleClick() {
     }
   }
 }
+
+setInterval = () => {
+  alert(`Please, use me...`), 30000;
+};

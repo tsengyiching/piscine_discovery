@@ -1,14 +1,15 @@
 function handleClick() {
   let todos = getTodos();
   let lastId;
-  let text = prompt("Whant needs to be done ?");
+  const text = prompt("Whant needs to be done ?");
+
+  if (!text) return;
 
   if (!todos.length) {
     lastId = 0;
   } else {
     lastId = Number(document.getElementsByClassName("todo")[0].id) + 1;
   }
-  if (!text) return;
 
   const newTodo = { key: lastId, text: text };
   todos.push(newTodo);
@@ -18,12 +19,10 @@ function handleClick() {
 
 function handleRemove(id, text) {
   let todos = getTodos();
-  let div = document.getElementById(id);
+  const div = document.getElementById(id);
   const index = todos.findIndex((todo) => todo.key === id);
 
-  if (!confirm(`Are you sure to remove todo :  ${text}?`)) {
-    return;
-  } else {
+  if (confirm(`Are you sure to remove todo :  ${text}?`)) {
     div.remove();
     todos.splice(index, 1);
     document.cookie = `todos` + `=` + JSON.stringify(todos);
@@ -33,13 +32,13 @@ function handleRemove(id, text) {
 function renderTodo(elem) {
   const list = document.getElementById("ft_list");
 
-  let div = document.createElement("div");
+  const div = document.createElement("div");
   div.classList.add("todo");
   div.setAttribute("id", elem.key);
   div.onclick = () => handleRemove(elem.key, elem.text);
 
-  let para = document.createElement("p");
-  let node = document.createTextNode(elem.text);
+  const para = document.createElement("p");
+  const node = document.createTextNode(elem.text);
   para.appendChild(node);
   div.appendChild(para);
   list.prepend(div);

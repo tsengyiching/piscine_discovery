@@ -7,4 +7,4 @@
 - Display your images after the previous text.
 - Open your file in your browser. You should see :
 
-![alt text](https://github.com/tsengyiching/piscine_discovery/cell12/example.png?raw=true)
+![example](https://github.com/tsengyiching/piscine_discovery/blob/main/cell12/example.png)

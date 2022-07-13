@@ -1,6 +1,4 @@
-# HTML CSS
-
-## Assignment
+# HTML CSS (Flexbox responsive)
 
 - Take the file from the previous cell, we are going to display images in it.
 - Go search for two images on Google.

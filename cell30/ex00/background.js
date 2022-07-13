@@ -7,6 +7,7 @@ function changeColor() {
     "yellow",
     "orange",
     "purple",
+    "white",
   ];
   let index = Math.floor(Math.random() * colors.length);
   let newColor = colors[index];

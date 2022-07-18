@@ -50,8 +50,8 @@ function getTodos() {
 
   if (!todos) return;
 
-  todos = todos.split("=");
-  todos = JSON.parse(todos[1]);
+  todos = todos.slice(6);
+  todos = JSON.parse(todos);
 
   return todos;
 }

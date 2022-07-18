@@ -5,7 +5,8 @@ function handleClick() {
 
   if (!text) return;
 
-  if (!todos.length) {
+  if (!todos || !todos.length) {
+    todos = [];
     lastId = 0;
   } else {
     lastId = Number(document.getElementsByClassName("todo")[0].id) + 1;

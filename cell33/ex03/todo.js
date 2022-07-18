@@ -12,9 +12,9 @@ function handleClick() {
     lastId = Number(document.getElementsByClassName("todo")[0].id) + 1;
   }
 
-  const newTodo = { key: lastId, text: text };
+  let newTodo = { key: lastId, text: text };
   todos.push(newTodo);
-  document.cookie = `todos` + `=` + JSON.stringify(todos);
+  document.cookie = `todos` + `=` + encodeURIComponent(JSON.stringify(todos));
   renderTodo(newTodo);
 }
 
@@ -26,7 +26,7 @@ function handleRemove(id, text) {
   if (confirm(`Are you sure to remove todo :  ${text}?`)) {
     div.remove();
     todos.splice(index, 1);
-    document.cookie = `todos` + `=` + JSON.stringify(todos);
+    document.cookie = `todos` + `=` + encodeURIComponent(JSON.stringify(todos));
   }
 }
 
@@ -50,6 +50,7 @@ function getTodos() {
 
   if (!todos) return;
 
+  todos = decodeURIComponent(todos);
   todos = todos.slice(6);
   todos = JSON.parse(todos);
 
